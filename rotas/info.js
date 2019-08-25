@@ -31,7 +31,9 @@ route.put('/:id', (req, res) => {
 });
 
 route.delete('/:id', (req, res) => {
-  const {id } = req.params;
+  console.log('here')
+  const id = req.params.id;
+  console.log(id)
 
 	connection.query(`DELETE FROM info WHERE id=${id}`, function(err, result, fields) {
 		if (err) throw err;
