@@ -24,7 +24,7 @@ route.put('/:id', (req, res) => {
   const {telefone, email, nome } = req.body;
 
 
-	connection.query(`INSERT INTO info (Telefone, E-mail, Nome) VALUES (${telefone}, '${email}',' ${nome}')`, function(err, result, fields) {
+	connection.query(`INSERT INTO info (telefone, email, nome) VALUES (${telefone}, '${email}',' ${nome}')`, function(err, result, fields) {
 		if (err) throw err;
 		res.json(result);
 	});
